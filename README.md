@@ -1,5 +1,7 @@
 # 🌡 Converture 🌡
 
+[![Travis Build](https://img.shields.io/travis/zsoltime/converture.svg?style=flat-square)](https://travis-ci.org/zsoltime/converture)
+
 Converture is a temperature converter, including functions to convert from/to Celsius, Fahrenheit and Kelvin. The returned value is rounded to two decimal places.
 
 ## Install

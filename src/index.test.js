@@ -1,56 +1,56 @@
-import convert, { round } from '.';
+import convert, { kelvin, celsius, fahrenheit, round } from '.';
 
 describe('Convert Kelvin', () => {
   test('can convert kelvin to celsius', () => {
     const k = 300;
-    // const actual = convert.kelvin(k).toCelsius();
     const expected = 26.85;
 
     expect(convert.kelvin(k).toCelsius()).toBeCloseTo(expected);
+    expect(kelvin(k).toCelsius()).toBeCloseTo(expected);
   });
 
   test('can convert kelvin to fahrenheit', () => {
     const k = 273;
-    const actual = convert.kelvin(k).toFahrenheit();
     const expected = 31.73;
 
-    expect(actual).toBeCloseTo(expected);
+    expect(convert.kelvin(k).toFahrenheit()).toBeCloseTo(expected);
+    expect(kelvin(k).toFahrenheit()).toBeCloseTo(expected);
   });
 });
 
 describe('Convert Celsius', () => {
   test('can convert celsius to kelvin', () => {
     const c = 12;
-    const actual = convert.celsius(c).toKelvin();
     const expected = 285.15;
 
-    expect(actual).toBeCloseTo(expected);
+    expect(convert.celsius(c).toKelvin()).toBeCloseTo(expected);
+    expect(celsius(c).toKelvin()).toBeCloseTo(expected);
   });
 
   test('can convert celsius to fahrenheit', () => {
     const c = 75;
-    const actual = convert.celsius(c).toFahrenheit();
     const expected = 167;
 
-    expect(actual).toBeCloseTo(expected);
+    expect(convert.celsius(c).toFahrenheit()).toBeCloseTo(expected);
+    expect(celsius(c).toFahrenheit()).toBeCloseTo(expected);
   });
 });
 
 describe('Convert Fahrenheit', () => {
   test('can convert fahrenheit to celsius', () => {
     const f = 68;
-    const actual = convert.fahrenheit(f).toCelsius();
     const expected = 20;
 
-    expect(actual).toBeCloseTo(expected);
+    expect(convert.fahrenheit(f).toCelsius()).toBeCloseTo(expected);
+    expect(fahrenheit(f).toCelsius()).toBeCloseTo(expected);
   });
 
   test('can convert fahrenheit to kelvin', () => {
     const f = 63;
-    const actual = convert.fahrenheit(f).toKelvin();
     const expected = 290.37;
 
-    expect(actual).toBeCloseTo(expected);
+    expect(convert.fahrenheit(f).toKelvin()).toBeCloseTo(expected);
+    expect(fahrenheit(f).toKelvin()).toBeCloseTo(expected);
   });
 });
 

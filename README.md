@@ -2,7 +2,7 @@
 
 Converture is a temperature converter, including functions to convert from/to Celsius, Fahrenheit and Kelvin. The returned value is rounded to two decimal places.
 
-## Install
+## Install
 
 ```bash
 npm install converture
@@ -11,11 +11,11 @@ npm install converture
 ## Usage
 
 ```javascript
-// CommonJS
+// Using CommonJS
 const convert = require('converture').default;
 
 // OR
-// ES6 modules
+// Using ES6 modules
 import convert from 'converture';
 
 convert.kelvin(50).toCelsius();
@@ -30,6 +30,12 @@ convert.fahrenheit(44).toKelvin();
 // => 279.82
 convert.fahrenheit(44).toCelsius();
 // => 6.67
+
+// You could also import a single function
+import { kelvin } from 'converture';
+
+kelvin(50).toFahrenheit();
+// => -369.67
 ```
 
 ## License
